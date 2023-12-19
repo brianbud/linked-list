@@ -32,6 +32,15 @@ class LinkedList {
     return this.head;
   }
 
+  getTail() {
+    let lastNode = this.head;
+    if (lastNode) {
+      while (lastNode.next) {
+        lastNode = lastNode.next;
+      }
+    }
+    return lastNode;
+  }
   clear() {
     this.head = null;
   }
@@ -39,8 +48,10 @@ class LinkedList {
 
 let node1 = new ListNode(2);
 let node2 = new ListNode(5);
+let node3 = new ListNode(5);
 node1.next = node2;
-
+node2.next = node3;
 let list = new LinkedList(node1);
 
 console.log(list.getFirst());
+console.log(list.getTail());
