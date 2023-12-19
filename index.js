@@ -28,6 +28,10 @@ class LinkedList {
     return count;
   }
 
+  getFirst() {
+    return this.head;
+  }
+
   clear() {
     this.head = null;
   }
@@ -39,5 +43,4 @@ node1.next = node2;
 
 let list = new LinkedList(node1);
 
-console.log(list.append(10));
-console.log(list);
+console.log(list.getFirst());
