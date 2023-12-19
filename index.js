@@ -18,6 +18,15 @@ class LinkedList {
     node.next = new ListNode(value);
   }
 
+  prepend(value) {
+    let node = null;
+    if (this.head != null) {
+      node = this.head;
+      this.head = new ListNode(value);
+      this.head.next = node;
+    }
+  }
+
   size() {
     let count = 0;
     let node = this.head;
@@ -53,5 +62,5 @@ node1.next = node2;
 node2.next = node3;
 let list = new LinkedList(node1);
 
-console.log(list.getFirst());
-console.log(list.getTail());
+console.log(list.prepend(100));
+console.log(list);
