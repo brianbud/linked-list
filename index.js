@@ -53,6 +53,17 @@ class LinkedList {
   clear() {
     this.head = null;
   }
+
+  at(index) {
+    let node = this.head;
+    for (let i = 0; i < index; i++) {
+      node = node.next;
+      if (node == null) {
+        return 'no item in this index';
+      }
+      return node;
+    }
+  }
 }
 
 let node1 = new ListNode(2);
@@ -63,4 +74,4 @@ node2.next = node3;
 let list = new LinkedList(node1);
 
 console.log(list.prepend(100));
-console.log(list);
+console.log(list.at(1));
