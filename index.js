@@ -64,6 +64,16 @@ class LinkedList {
       return node;
     }
   }
+
+  pop() {
+    let currentNode = this.head;
+    let prevNode = null;
+    while (currentNode.next != null) {
+      prevNode = currentNode;
+      currentNode = currentNode.next;
+    }
+    prevNode.next = null;
+  }
 }
 
 let node1 = new ListNode(2);
