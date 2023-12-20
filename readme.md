@@ -15,4 +15,5 @@ and the following methods:
 - getFirst returns the head in the list
 - getTail returns the tail node in the list
 - at(index) return node at given index
--
+- pop() removes last element from list
+- contains(value) return true if value exist in the list
